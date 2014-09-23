@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="discription" content="Handmade Jewelry, Ръчно изработени бижута"/>
+    <meta name="keywords" content="ръчно изработени бижута, бижута, handmade jewel, jewelry"/>
+    <title>MartiSign Jewelry Galery</title>
+    <link href='http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css' />
+    <link href="styles/martisign-styles.css" rel="stylesheet" />
+    <link href="styles/Jewell-galery.css" rel="stylesheet" />
+</head>
+<body onscroll="Fix()">
+    <header>
+        <h1 id="main-title"><strong>MartiSign</strong></h1>
+            <ul id="navigation">
+                <li class="nav-home"><a href="Homepage.html">Начало</a></li>
+                <li class="nav-hair-gallery"><a href="Hair-gallery.html">Галерия <strong>Прически</strong></a>
+                    <ul>
+                        <li><a href="pricelist.html">Ценоразпис</a></li>
+                    </ul>
+                </li>
+                <li class="nav-jewelry-gallery"><a href="Jewelry-gallery.html">Галерия <strong>Бижута</strong></a></li>
+                <li class="nav-contacts"><a href="Contacts.html">Контакти</a></li>
+            </ul>
+    </header>
+    <div id="gallery">
+        <div class="thumbnails">
+            <div class="left">
+                <img onclick="preview.src=img1.src; Fix()" id="img1" src="imgs/100_9368.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img2.src; Fix()" id="img2" src="imgs/100_9228.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img3.src; Fix()" id="img3" src="imgs/100_9230.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img4.src; Fix()" id="img4" src="imgs/100_9234.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img5.src; Fix()" id="img5" src="imgs/100_9237.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img6.src; Fix()" id="img6" src="imgs/100_9242.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img7.src; Fix()" id="img7" src="imgs/100_9245.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img8.src; Fix()" id="img8" src="imgs/100_9253.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img9.src; Fix()" id="img9" src="imgs/100_9286.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img10.src; Fix()" id="img10" src="imgs/100_9287.png" alt="Image Not Loaded" />
+            </div>
+            <div class="right">
+                <img onclick="preview.src=img11.src; Fix()" id="img11" src="imgs/100_9292.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img12.src; Fix()" id="img12" src="imgs/100_9304.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img13.src; Fix()" id="img13" src="imgs/100_9308.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img14.src; Fix()" id="img14" src="imgs/100_9315.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img15.src; Fix()" id="img15" src="imgs/100_9330.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img16.src; Fix()" id="img16" src="imgs/100_9351.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img17.src; Fix()" id="img17" src="imgs/100_9352.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img18.src; Fix()" id="img18" src="imgs/100_9355.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img19.src; Fix()" id="img19" src="imgs/100_9357.png" alt="Image Not Loaded" />
+                <img onclick="preview.src=img20.src; Fix()" id="img20" src="imgs/100_9358.png" alt="Image Not Loaded" />
+            </div>
+        </div>
+        <div id="prev" align="center">
+            <img id="preview" src="imgs/100_9368.png" alt="No Image Loaded" />
+        </div>
+    </div>
+    <script>
+        window.addEventListener("onscroll", Fix, false);
+        var elemTop = document.getElementById("prev").offsetTop;
+        function Fix() {
+            if (window.pageYOffset >= elemTop) {
+                document.getElementById("preview").style.position = "fixed";
+                document.getElementById("preview").style.top = "0";
+                if (document.getElementById("preview").offsetWidth > 550) {
+                    document.getElementById("preview").style.right = "26%";
+                    document.getElementById("preview").style.top = "5%";
+                }
+                else {
+                    document.getElementById("preview").style.right = "34%";
+                    document.getElementById("preview").style.top = "3%";
+                }
+            }
+            else {
+                document.getElementById("preview").style.position = "inherit";
+                document.getElementById("preview").style.top = "5%";
+            }
+        }
+    </script>
+</body>
+</html>

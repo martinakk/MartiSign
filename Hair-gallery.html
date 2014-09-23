@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="discription" content="Hair Studio, Фризьорски салон, Студио за красота"/>
+    <meta name="keywords" content="коса, прически, фризьор, подстригване, боядисване, кичури, hair, hairstyle, hairdresser, haircut, hair color, hair clumps"/>
+    <title>MartiSign Hair Gallery</title>
+    <link href="http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic" rel="stylesheet" type="text/css" />
+    <link href="styles/martisign-styles.css" rel="stylesheet" />
+    <link href="styles/Jewell-galery.css" rel="stylesheet" />
+</head>
+<body onscroll="Fix()">
+    <div id="wrap">
+        <header>
+            <h1 id="main-title"><strong>MartiSign</strong></h1>
+            <ul id="navigation">
+                <li class="nav-home"><a href="Homepage.html">Начало</a></li>
+                <li class="nav-hair-gallery"><a href="Hair-gallery.html">Галерия <strong>Прически</strong></a>
+                    <ul>
+                        <li><a href="pricelist.html">Ценоразпис</a></li>
+                    </ul>
+                </li>
+                <li class="nav-jewelry-gallery"><a href="Jewelry-gallery.html">Галерия <strong>Бижута</strong></a></li>
+                <li class="nav-contacts"><a href="Contacts.html">Контакти</a></li>
+            </ul>
+        </header>
+        <div id="gallery">
+            <div class="thumbnails">
+                <div class="left">
+                    <img onclick="preview.src=img1.src; Fix()" id="img1" src="imgs/100_4786.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img2.src; Fix()" id="img2" src="imgs/100_4808.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img3.src; Fix()" id="img3" src="imgs/100_4820.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img4.src; Fix()" id="img4" src="imgs/100_4821.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img5.src; Fix()" id="img5" src="imgs/100_4913.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img6.src; Fix()" id="img6" src="imgs/100_5003.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img7.src; Fix()" id="img7" src="imgs/100_5023.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img8.src; Fix()" id="img8" src="imgs/100_5136.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img9.src; Fix()" id="img9" src="imgs/100_5137.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img10.src; Fix()" id="img10" src="imgs/100_5313.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img11.src; Fix()" id="img11" src="imgs/100_5627.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img12.src; Fix()" id="img12" src="imgs/100_5939.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img13.src; Fix()" id="img13" src="imgs/100_5949.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img14.src; Fix()" id="img14" src="imgs/100_6071.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img15.src; Fix()" id="img15" src="imgs/100_6335.png" alt="Image Not Loaded" />
+                </div>
+                <div class="right">
+                    <img onclick="preview.src=img16.src; Fix()" id="img16" src="imgs/100_6540.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img17.src; Fix()" id="img17" src="imgs/100_6549.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img18.src; Fix()" id="img18" src="imgs/100_6698.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img19.src; Fix()" id="img19" src="imgs/100_6812.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img20.src; Fix()" id="img20" src="imgs/100_6823.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img21.src; Fix()" id="img21" src="imgs/100_6870.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img22.src; Fix()" id="img22" src="imgs/100_6877.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img23.src; Fix()" id="img23" src="imgs/100_6887.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img24.src; Fix()" id="img24" src="imgs/100_6891.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img25.src; Fix()" id="img25" src="imgs/100_7059.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img26.src; Fix()" id="img26" src="imgs/100_7066.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img27.src; Fix()" id="img27" src="imgs/100_7069.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img28.src; Fix()" id="img28" src="imgs/100_7072.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img29.src; Fix()" id="img29" src="imgs/100_7074.png" alt="Image Not Loaded" />
+                    <img onclick="preview.src=img30.src; Fix()" id="img30" src="imgs/100_7182.png" alt="Image Not Loaded" />
+                </div>
+            </div>
+            <div id="prev" align="center">
+                <img id="preview" src="imgs/100_4786.png" alt="No Image Loaded" />
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener("onscroll", Fix, false);
+        var elemTop = document.getElementById("prev").offsetTop;
+        function Fix() {
+            if (window.pageYOffset >= elemTop) {
+                document.getElementById("preview").style.position = "fixed";
+                document.getElementById("preview").style.top = "0";
+                if (document.getElementById("preview").offsetWidth > 550) {
+                    document.getElementById("preview").style.right = "26%";
+                    document.getElementById("preview").style.top = "12%";
+                }
+                else {
+                    document.getElementById("preview").style.right = "32%";
+                    document.getElementById("preview").style.top = "2%";
+                }
+            }
+            else {
+                document.getElementById("preview").style.position = "inherit";
+                document.getElementById("preview").style.top = "15%";
+            }
+        }
+    </script>
+</body>
+</html>
